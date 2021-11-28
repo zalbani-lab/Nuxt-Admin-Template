@@ -1,0 +1,12 @@
+{
+  "image": {
+    "@id": "/api/media/0",
+    "@type": "Media",
+    "contentUrl": "/img/placeholder-animation.jpg",
+    "title": "Titre de l'image",
+    "legend": "Legende de l'image",
+    "id": 0,
+    "createdAt": "2021-03-15T15:47:33+01:00",
+    "updatedAt": "2021-03-19T11:45:37+01:00"
+  }
+}

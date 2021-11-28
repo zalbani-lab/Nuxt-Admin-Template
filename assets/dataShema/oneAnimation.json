@@ -1,0 +1,43 @@
+{
+  "@context": "/api/contexts/Animation",
+  "@id": "/api/animations/0",
+  "@type": "Animation",
+  "title": "Titre du animation",
+  "shortDescription": "Description courte",
+  "longDescription": "Description longue",
+  "publicationDate": null,
+  "programs": [
+    {
+      "@id": "/api/programs/0",
+      "@type": "Program",
+      "title": "Titre d'un programme",
+      "description": "Description du programme",
+      "dateStart": "1970-07-01T00:48:16+01:00",
+      "dateEnd": "2012-11-27T00:27:37+01:00",
+      "id": 0,
+      "createdAt": "2021-03-15T15:47:02+01:00",
+      "updatedAt": "2021-03-20T18:56:42+01:00"
+    }
+  ],
+  "status": {
+    "@id": "/api/animation_statuses/0",
+    "@type": "AnimationStatus",
+    "name": "PUBLIER",
+    "id": 0,
+    "createdAt": "2021-03-15T15:47:02+01:00",
+    "updatedAt": null
+  },
+  "image": {
+    "@id": "/api/media/0",
+    "@type": "Media",
+    "contentUrl": "/img/placeholder-animation.jpg",
+    "title": "Titre de l'image",
+    "legend": "Legende de l'image",
+    "id": 0,
+    "createdAt": "2021-03-15T15:47:33+01:00",
+    "updatedAt": "2021-03-19T11:45:37+01:00"
+  },
+  "id": 0,
+  "createdAt": "2021-03-15T15:47:02+01:00",
+  "updatedAt": "2021-03-20T22:16:09+01:00"
+}

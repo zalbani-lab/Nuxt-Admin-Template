@@ -1,15 +1,15 @@
 <p align="center">
-  <img src="https://github.com/Zalbani/Nuxt-Admin-Template/blob/master/home.png" alt="my-front screen"/>
+  <img src="https://github.com/zalbani-lab/Nuxt-Admin-Template/blob/master/home.png" alt="my-front screen"/>
 </p>
 <p align="center">
   <a href="http://www.gnu.org/licenses/gpl-3.0" alt="License: GPL v3"><img src="https://img.shields.io/badge/License-GPL%20v3-blue.svg" /></a>
 </p>
 <p align="center">
-  <a href="https://snyk.io/test/github/Zalbani/Nuxt-Admin-Template" alt="Known Vulnerabilities"><img src="https://snyk.io/test/github/Zalbani/Nuxt-Admin-Template/badge.svg" /></a>
+  <a href="https://snyk.io/test/github/zalbani-lab/Nuxt-Admin-Template" alt="Known Vulnerabilities"><img src="https://snyk.io/test/github/zalbani-lab/Nuxt-Admin-Template/badge.svg" /></a>
 </p>
 <p align="center">
-  <a href="https://github.com/Zalbani/Nuxt-Admin-Template/commits/master" alt="LastCommit"><img src="https://img.shields.io/github/last-commit/Zalbani/Nuxt-Admin-Template?style=flat-square" /></a>
-  <a href="http://hits.dwyl.com/Zalbani/Nuxt-Admin-Template" alt="HitCount"><img src="http://hits.dwyl.com/Zalbani/Nuxt-Admin-Template.svg" /></a>
+  <a href="https://github.com/zalbani-lab/Nuxt-Admin-Template/commits/master" alt="LastCommit"><img src="https://img.shields.io/github/last-commit/zalbani-lab/Nuxt-Admin-Template?style=flat-square" /></a>
+  <a href="http://hits.dwyl.com/zalbani-lab/Nuxt-Admin-Template" alt="HitCount"><img src="http://hits.dwyl.com/zalbani-lab/Nuxt-Admin-Template.svg" /></a>
 </p>
 
 # Dashboard Template 

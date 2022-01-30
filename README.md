@@ -1,20 +1,18 @@
 <p align="center">
-  <img src="https://github.com/Bibliotheque-Lyon/Agenda-admin/blob/master/home.png" alt="my-front screen"/>
+  <img src="https://github.com/zalbani-lab/Nuxt-Admin-Template/blob/master/home.png" alt="my-front screen"/>
 </p>
 <p align="center">
-  <a href="https://david-dm.org/Bibliotheque-Lyon/Agenda-admin" alt="Dependencies"><img src="https://david-dm.org/Bibliotheque-Lyon/Agenda-admin.svg" /></a>
   <a href="http://www.gnu.org/licenses/gpl-3.0" alt="License: GPL v3"><img src="https://img.shields.io/badge/License-GPL%20v3-blue.svg" /></a>
 </p>
 <p align="center">
-  <a href="https://snyk.io/test/github/Bibliotheque-Lyon/Agenda-admin" alt="Known Vulnerabilities"><img src="https://snyk.io/test/github/Bibliotheque-Lyon/Agenda-admin/badge.svg" /></a>
-  <a href="https://codeclimate.com/github/Bibliotheque-Lyon/Agenda-admin/maintainability" alt="Maintainability"><img src="https://api.codeclimate.com/v1/badges/db92dbcfec4dfc407995/maintainability" /></a>
+  <a href="https://snyk.io/test/github/zalbani-lab/Nuxt-Admin-Template" alt="Known Vulnerabilities"><img src="https://snyk.io/test/github/zalbani-lab/Nuxt-Admin-Template/badge.svg" /></a>
 </p>
 <p align="center">
-  <a href="https://github.com/Bibliotheque-Lyon/Agenda-admin/commits/master" alt="LastCommit"><img src="https://img.shields.io/github/last-commit/Bibliotheque-Lyon/Agenda-admin?style=flat-square" /></a>
-  <a href="http://hits.dwyl.com/Bibliotheque-Lyon/Agenda-admin" alt="HitCount"><img src="http://hits.dwyl.com/Bibliotheque-Lyon/Agenda-admin.svg" /></a>
+  <a href="https://github.com/zalbani-lab/Nuxt-Admin-Template/commits/master" alt="LastCommit"><img src="https://img.shields.io/github/last-commit/zalbani-lab/Nuxt-Admin-Template?style=flat-square" /></a>
+  <a href="http://hits.dwyl.com/zalbani-lab/Nuxt-Admin-Template" alt="HitCount"><img src="http://hits.dwyl.com/zalbani-lab/Nuxt-Admin-Template.svg" /></a>
 </p>
 
-# Admin agenda - complete dashboard to manage Agenda 
+# Dashboard Template 
 > A complete front-end dashboard
 
 ## Built With
@@ -74,9 +72,7 @@ $ yarn test
 
 ## Release History
 
-* 0.0.3
-  * Had all feat for the categorisation of animations (type, tags & theme)
-* 0.0.2
+* 0.1
     * MVP
 
 ## Authors

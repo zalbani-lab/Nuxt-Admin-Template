@@ -1,9 +1,9 @@
 <template>
   <v-data-table
     :headers="headers"
-    :items="themes"
+    :items="categorys"
     :options.sync="options"
-    :server-items-length="themeNumber"
+    :server-items-length="categoryNumber"
     :loading="loading"
     :footer-props="{
       itemsPerPageOptions: [],
@@ -34,10 +34,10 @@
               v-bind="attrs"
               v-on="on"
             >
-              Créer un theme
+              Créer un category
             </v-btn>
           </template>
-          <theme-form :theme="editedItem" :operation="operation" @close:pop-up="closeForm()" @reload="initialize()" />
+          <category-form :category="editedItem" :operation="operation" @close:pop-up="closeForm()" @reload="initialize()" />
         </v-dialog>
         <v-dialog v-model="dialogDelete" max-width="800px">
           <v-card>
@@ -62,7 +62,7 @@
       </v-toolbar>
     </template>
     <template v-slot:item.name="{ item }">
-      <theme-name-display :theme-name="item.name" />
+      <category-name-display :category-name="item.name" />
     </template>
     <template v-slot:item.actions="{ item }">
       <v-icon
@@ -98,9 +98,9 @@ export default {
       loading: true,
       dialogForm: false,
       dialogDelete: false,
-      themeNumber: 0,
+      categoryNumber: 0,
       editedIndex: -1,
-      themes: [],
+      categorys: [],
       editedItem: {},
       options: {
         itemsPerPage: 30,
@@ -137,14 +137,14 @@ export default {
     },
     async sort () {
       const tempFilterParams = await this.$helpers.filters.constructor(this.options)
-      this.$api.theme.getFiltered(tempFilterParams)
+      this.$api.category.getFiltered(tempFilterParams)
         .then(response => this.variableAttribution(response))
     },
     // Confirmation to delete the item
     deleteItemConfirm () {
       this.closeDelete()
-      this.$api.theme.delete(this.editedItem.id)
-        .then(() => this.themes.splice(this.editedIndex, 1))
+      this.$api.category.delete(this.editedItem.id)
+        .then(() => this.categorys.splice(this.editedIndex, 1))
     },
     // Visual functions they hide all forms pop-ups
     closeForm () {
@@ -171,7 +171,7 @@ export default {
     // Helpers
     // Assignment functions : They assign the curent clicked object into this.editedItem
     assignEditedItemToRealItem (item) {
-      this.editedIndex = this.themes.indexOf(item)
+      this.editedIndex = this.categorys.indexOf(item)
       this.editedItem = Object.assign({}, item)
     },
     resetEditedItem () {
@@ -179,8 +179,8 @@ export default {
       this.editedItem = Object.assign({})
     },
     variableAttribution (response) {
-      this.themes = response.data['hydra:member']
-      this.themeNumber = response.data['hydra:totalItems']
+      this.categorys = response.data['hydra:member']
+      this.categoryNumber = response.data['hydra:totalItems']
       this.loading = false
       this.$helpers.window.scrollToTop()
     }

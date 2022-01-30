@@ -1,8 +1,6 @@
 <template>
   <div class="col-md-8 offset-md-2">
     <!--    <animation-search />-->
-    <roll-up-messages />
-    <calendar-vuetify />
   </div>
 </template>
 

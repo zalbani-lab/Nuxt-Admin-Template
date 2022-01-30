@@ -113,7 +113,7 @@ export default {
     return {
       dialog: false,
       allImages: [],
-      imageTypes: ['fixture', 'animations', 'programs', 'accessibility', 'partners', 'hosts'],
+      imageTypes: ['fixture', 'animations', 'accessibility', 'partners', 'hosts'],
       currentImageType: '',
       originalImage: null,
       selectedImage: null,

@@ -1,19 +1,19 @@
 <template>
   <section class="col-md-8 offset-md-2">
-    <program-list-container />
+    <category-admin-table />
   </section>
 </template>
 <script>
 export default {
   layout: 'admin',
-  middleware: 'redactor',
+  middleware: 'connected',
   transition: 'opacity',
   fetch () {
     this.$store.commit('updatePageTitle', this.title)
   },
   data () {
     return {
-      title: 'Les programmes',
+      title: 'Les categories',
       meta_desc: 'Je suis le magnifique content',
       programs: [],
       displayCard: true

@@ -52,14 +52,6 @@
         </v-dialog>
       </v-toolbar>
     </template>
-    <template v-slot:item.programs="{ item }">
-      <p v-for="program in item.programs" :key="program.id">
-        {{ program.title }}
-      </p>
-    </template>
-    <template v-slot:item.status="{ item }">
-      <animation-status-name-display :status-name="item.status.name" />
-    </template>
     <template v-slot:item.publicationDate="{ item }">
       <p v-if="item.publicationDate !== null">
         {{ $moment(item.publicationDate).format("DD/MM/YYYY") }}
@@ -100,8 +92,6 @@ export default {
         { text: 'Titre', value: 'title', sortable: false },
         { text: 'Description courte', value: 'shortDescription', sortable: false },
         { text: 'Description longue', value: 'longDescription', sortable: false },
-        { text: 'Programmes', value: 'programs', sortable: false },
-        { text: 'Status', value: 'status' },
         { text: 'Date de publication', value: 'publicationDate' },
         { text: 'Actions', value: 'actions', sortable: false }
       ]

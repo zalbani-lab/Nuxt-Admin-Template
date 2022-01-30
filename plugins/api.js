@@ -13,7 +13,7 @@ export default (context, inject) => {
     user: User(context.$axios, context.store),
     animation: Animation(context.$axios, context.store),
     media: Media(context.$axios, context.store),
-    theme: Category(context.$axios, context.store)
+    category: Category(context.$axios, context.store)
   }
 
   // Inject $api

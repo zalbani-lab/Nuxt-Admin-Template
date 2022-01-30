@@ -1,18 +1,18 @@
 <template>
   <div class="col-md-10 offset-md-1">
-    <theme-admin-table />
+    <category-admin-table />
   </div>
 </template>
 <script>
 export default {
   layout: 'admin',
-  middleware: 'redactor',
+  middleware: 'connected',
   fetch () {
     this.$store.commit('updatePageTitle', this.title)
   },
   data () {
     return {
-      title: 'Admin : themes',
+      title: 'Admin : categorys',
       meta_desc: ''
     }
   },

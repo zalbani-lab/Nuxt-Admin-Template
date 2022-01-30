@@ -13,8 +13,8 @@
               md="12"
             >
               <v-text-field
-                v-model="theme.name"
-                label="Nom du theme"
+                v-model="category.name"
+                label="Nom du category"
                 type="string"
                 :rules="[$helpers.formRules.required]"
               />
@@ -52,7 +52,7 @@ export default {
         return 'creation'
       }
     },
-    theme: {
+    category: {
       type: Object,
       default () {
         return {
@@ -71,11 +71,11 @@ export default {
     formTitle () {
       switch (this.operation) {
         case 'creation':
-          return 'Nouveau theme'
+          return 'Nouveau category'
         case 'modification':
-          return 'Editer le theme'
+          return 'Editer le category'
         default:
-          return 'Error with the operation variable inside ThemeForm component'
+          return 'Error with the operation variable inside CategoryForm component'
       }
     }
   },
@@ -84,10 +84,10 @@ export default {
     async save () {
       switch (this.operation) {
         case 'creation':
-          await this.$api.theme.post(this.theme)
+          await this.$api.category.post(this.category)
           break
         case 'modification':
-          await this.$api.theme.put(this.theme)
+          await this.$api.category.put(this.category)
           break
         default:
       }

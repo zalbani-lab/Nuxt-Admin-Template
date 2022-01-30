@@ -15,10 +15,6 @@
         <animation-form :animation="animation" @reload="initialize" />
       </v-tab-item>
       <v-tab-item class="tabsContainer__content">
-        <calendar-vuetify :hard-filters="dateSearchParams" />
-        <date-list-container :hard-filters="dateSearchParams" :display-options="datesDisplayOption" />
-      </v-tab-item>
-      <v-tab-item class="tabsContainer__content">
         <v-card flat>
           <section v-if="$store.getters.isAdmin">
             <h1>Logs</h1>
@@ -32,7 +28,7 @@
 <script>
 export default {
   layout: 'admin',
-  middleware: 'redactor',
+  middleware: 'connected',
   transition: 'opacity',
   fetch () {
     this.$store.commit('updatePageTitle', this.title)
@@ -54,11 +50,6 @@ export default {
         },
         {
           id: 1,
-          name: 'Dates',
-          icon: 'icon-calendar'
-        },
-        {
-          id: 2,
           name: 'Details',
           icon: 'icon-activity'
         }

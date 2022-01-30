@@ -12,12 +12,12 @@
         <span :class="[tab.icon, 'tabsContainer__tabsHeaderIcon']" />
       </v-tab>
       <v-tab-item class="tabsContainer__content">
-        <program-form :program="program" @reload="initialize" />
+        <category-form :category="category" @reload="initialize" />
       </v-tab-item>
       <v-tab-item class="tabsContainer__content">
         <div class="col-md-9 offset-md-1">
           <h2>
-            animation relie au programme :
+            animation relie au a la category :
           </h2>
           <animation-list-container :hard-filters="animationSearchParams" :display-options="animationsDisplayOption" />
         </div>
@@ -34,23 +34,23 @@
 <script>
 export default {
   layout: 'admin',
-  middleware: 'redactor',
+  middleware: 'connected',
   transition: 'opacity',
   fetch () {
     this.$store.commit('updatePageTitle', this.title)
   },
   data () {
     return {
-      title: 'Programme : ' + this.$route.params.id,
+      title: 'Categoryme : ' + this.$route.params.id,
       meta_desc: 'Je suis le magnifique content',
-      animationSearchParams: { programs: '/api/programs/'.concat(this.$route.params.id) },
+      animationSearchParams: { categories: '/api/categories/'.concat(this.$route.params.id) },
       animationsDisplayOption: { search: false },
       currentTab: null,
       logs: null,
       tabs: [
         {
           id: 0,
-          name: 'Programme',
+          name: 'Category',
           icon: 'icon-inbox'
         },
         {
@@ -64,7 +64,7 @@ export default {
           icon: 'icon-activity'
         }
       ],
-      program: {}
+      category: {}
     }
   },
   mounted () {
@@ -73,16 +73,16 @@ export default {
   methods: {
     initialize () {
       this.loadLogs()
-      this.loadProgram()
+      this.loadCategory()
     },
-    loadProgram () {
-      this.$api.program.getOne(this.$route.params.id)
-        .then(response => (this.program = response.data))
+    loadCategory () {
+      this.$api.category.getOne(this.$route.params.id)
+        .then(response => (this.category = response.data))
     },
     loadLogs () {
       if (this.$store.getters.isAdmin) {
         const params = {
-          targetElement: 'programs',
+          targetElement: 'categories',
           targetId: this.$route.params.id
         }
         this.$api.log.getFiltered(params)

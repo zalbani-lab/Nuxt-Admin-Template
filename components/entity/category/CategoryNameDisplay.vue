@@ -1,15 +1,15 @@
 <template>
-  <v-chip v-if="displayOptions === 'chip'" :color="getThemeColor(themeName)" dark>
-    {{ themeName.toLowerCase() }}
+  <v-chip v-if="displayOptions === 'chip'" :color="getCategoryColor(categoryName)" dark>
+    {{ categoryName.toLowerCase() }}
   </v-chip>
-  <span v-else-if="displayOptions === 'span'" :style="{ backgroundColor: getThemeColor(themeName)}">
-    {{ themeName }}
+  <span v-else-if="displayOptions === 'span'" :style="{ backgroundColor: getCategoryColor(categoryName)}">
+    {{ categoryName }}
   </span>
 </template>
 <script>
 export default {
   props: {
-    themeName: {
+    categoryName: {
       type: String,
       default () {
         return ''
@@ -23,8 +23,8 @@ export default {
     }
   },
   methods: {
-    // Visual function Add custom color to theme
-    getThemeColor (name) {
+    // Visual function Add custom color to category
+    getCategoryColor (name) {
       switch (name.toLowerCase()) {
         case 'nature':
           return '#9CC947'

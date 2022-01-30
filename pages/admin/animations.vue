@@ -6,7 +6,7 @@
 <script>
 export default {
   layout: 'admin',
-  middleware: 'redactor',
+  middleware: 'connected',
   fetch () {
     this.$store.commit('updatePageTitle', this.title)
   },

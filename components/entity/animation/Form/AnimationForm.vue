@@ -12,10 +12,6 @@
       </section>
       <aside class="animationForm__side">
         <image-edition-container :image="animation.image" class="tempMargin" @update:image="animation.image = $event" />
-        <program-edition-container :programs="animation.programs" class="tempMargin" @update:programs="animation.programs = $event" />
-        <status-container :animation="animation" @reload="$emit('reload')" @update:publication-date="animation.publicationDate = $event" />
-        <theme-edition-container :theme="animation.theme" @update:theme="animation.theme = $event" />
-        <tag-edition-container :tags="animation.tags" class="tempMargin" @update:tags="animation.tags = $event" />
         <!--        <type-selector :already-selected-type="animation.type" class="tempMargin" @update:type="animation.type = $event" />-->
       </aside>
     </v-form>
@@ -52,17 +48,6 @@ export default {
     },
     triggerEventReload () {
       this.$emit('reload')
-    },
-    unPublish () {
-      this.$api.animation.unPublish(this.animation.id)
-        .then(() => this.triggerEventReload())
-    },
-    publish () {
-      this.$api.animation.publish(this.animation.id)
-        .then(() => this.triggerEventReload())
-    },
-    canHavePublicationDate () {
-      return this.animation.status.name !== 'PUBLIER' && this.animation.status.name !== 'DEPUBLIER'
     }
   }
 }

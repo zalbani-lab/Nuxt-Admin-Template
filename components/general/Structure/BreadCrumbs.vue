@@ -52,8 +52,6 @@ export default {
       switch (linkText) {
         case 'dashboard':
           return 'Accueil'
-        case 'programs':
-          return 'programmes'
         case 'hosts':
           return 'intervenants'
         case 'partners':

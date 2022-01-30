@@ -63,9 +63,6 @@
       <display-role-name :user-role="item.roles[0]" />
     </template>
     <template v-slot:item.actions="{ item }">
-      <v-icon v-if="$store.getters.isAdmin" medium color="primary" @click="grantItem(item)">
-        mdi-arrow-up-bold
-      </v-icon>
       <v-icon medium color="blue darken-1" class="mr-2" @click="editItem(item)">
         mdi-pencil
       </v-icon>
@@ -130,13 +127,6 @@ export default {
       this.closeDelete()
     },
     // Visual functions they hide all forms pop-ups
-    closeGrant () {
-      this.dialogGrant = false
-      this.$nextTick(() => {
-        this.resetEditedItem()
-        this.emitReload()
-      })
-    },
     closeForm () {
       this.dialogForm = false
       this.$nextTick(() => {
@@ -151,10 +141,6 @@ export default {
       })
     },
     // Assignment functions + Show appropriate pop-up
-    grantItem (item) {
-      this.assignEditedItemToRealItem(item)
-      this.dialogGrant = true
-    },
     editItem (item) {
       this.assignEditedItemToRealItem(item)
       this.dialogForm = true
